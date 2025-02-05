@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/fonts/Gotham/Gotham-Medium.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/fonts/Gotham/Gotham-Bold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/fonts/Gotham/Gotham-Black.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Sattinda";
+  src: url("./assets/fonts/Sattinda/Sattinda.otf");
+}
+
+@layer base {
+  :root {
+    --background: #0b0b0b;
+    --foreground: #f8f8f8;
+    --primary: #00a79c;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    min-height: 100dvh;
+    color: var(--foreground);
+    font-family: Gotham, sans-serif;
+  }
+
+  .bg-background {
+    background-color: var(--background);
+  }
+
+  .text-foreground {
+    color: var(--foreground);
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .font-sattinda {
+    font-family: Sattinda;
+  }
+
+  .border-primary {
+    border-color: var(--primary);
+  }
+
+  .menu-button {
+    @apply grid flex-1 place-content-center h-[114px] min-w-[270px] md:max-w-[353px] border border-[#DFDFDF52] rounded-[20px] cursor-pointer;
+  }
+
+  .cousine {
+    @apply bg-[url(./assets/images/cousine.png)];
+  }
+
+  .bar {
+    @apply bg-[url(./assets/images/bar.png)];
+  }
+}

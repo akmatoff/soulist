@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soulist</title>
+</head>
+
+<body class="bg-background">
+    <main class="flex flex-col items-center min-h-dvh px-[27px] md:px-[62px] pb-[67px]">
+        <div class="flex flex-col items-center max-w-[800px] gap-[73px]">
+            <section class="flex flex-col items-center text-center text-[16px] md:text-[24px] font-medium">
+                <img src="src/assets/soulist.svg">
+
+                <div class="flex flex-col gap-[24px]">
+                    <div>
+                        <p data-i18n="hero.heading"></p>
+                        <p data-i18n="hero.sub_heading" class="mt-[14px]"></p>
+                    </div>
+
+                    <div>
+                        <p data-i18n="hero.soulist_is_more"></p>
+                        <p>SOULIST - <span data-i18n="hero.soulist_is"
+                                class="font-sattinda text-primary text-[32px] md:text-[37px]"></span></p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="flex justify-center w-full flex-wrap gap-[14px]">
+                <div class="menu-button cousine border-[#00a79c] border-3">
+                    <h1 data-i18n="cousine" class="uppercase font-bold text-[38px]"></h1>
+                </div>
+
+                <div class="menu-button bar">
+                    <h1 data-i18n="bar" class="uppercase font-bold text-[38px]"></h1>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
