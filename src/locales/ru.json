@@ -21,5 +21,19 @@
     "bread": "Хлеб",
     "neapolitan_pizza": "Неаполитанская пицца",
     "desserts": "Десерты"
+  },
+  "bar_categories": {
+    "party_mix": "Party Mix",
+    "champagne": "Шампанское",
+    "sparkling_wines": "Игристые вина",
+    "white_wines": "Белые вина",
+    "red_wines": "Красные вина",
+    "pink_wines": "Розовые вина",
+    "glass_wines": "Вина по бокалам",
+    "cocktails": "Коктейли",
+    "whiskey": "Виски",
+    "bar_card": "Барная карта",
+    "non_alcoholic_drinks": "Безалкогольные напитки",
+    "soulist_rules": "Правила караоке Soulist"
   }
 }
