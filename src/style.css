@@ -84,11 +84,11 @@
   }
 
   .category-section {
-    @apply min-h-dvh w-full;
+    @apply min-h-dvh w-full bg-[url(./assets/images/categories-background.png)];
   }
 
   #cousineCategories,
   #barCategories {
-    @apply w-full bg-[url(./assets/images/categories-background.png)] bg-contain py-[38px];
+    @apply w-full py-[38px];
   }
 }
