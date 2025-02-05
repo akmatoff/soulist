@@ -36,12 +36,12 @@ export function updateLanguageSelectors() {
   languageSelectors.forEach((selector) => {
   const language = selector.getAttribute("data-lang")
     
-    
     if (currentLanguage === language) {
       selector.classList.add('border-[0.5px]')
     } else {
       selector.classList.remove('border-[0.5px]');
     }
+
   })
 }
 

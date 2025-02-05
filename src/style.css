@@ -77,4 +77,8 @@
   .language-select {
     @apply cursor-pointer px-1 rounded-[5px] border-[var(--primary)];
   }
+
+  .category {
+    @apply px-[14px] py-[8px] border-2 border-[var(--primary)] rounded-[12px] text-[var(--primary)] cursor-pointer;
+  }
 }

@@ -6,5 +6,20 @@
     "soulist_is": "mesto, gde poet dusha"
   },
   "cousine": "Кухня",
-  "bar": "Бар"
+  "bar": "Бар",
+  "cousine_categories": {
+    "cold_snacks": "Холодные закуски",
+    "salads": "Салаты",
+    "soups": "Супы",
+    "hot_snacks": "Горячие закуски",
+    "hot": "Горячее",
+    "pasta": "Паста",
+    "rolls": "Роллы",
+    "steaks": "Стейки",
+    "hosper": "Хоспер",
+    "garnish": "Гарниры",
+    "bread": "Хлеб",
+    "neapolitan_pizza": "Неаполитанская пицца",
+    "desserts": "Десерты"
+  }
 }
