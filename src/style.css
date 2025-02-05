@@ -32,6 +32,7 @@
 
   * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -80,5 +81,14 @@
 
   .category {
     @apply px-[14px] py-[8px] border-2 border-[var(--primary)] rounded-[12px] text-[var(--primary)] cursor-pointer;
+  }
+
+  .category-section {
+    @apply min-h-dvh w-full;
+  }
+
+  #cousineCategories,
+  #barCategories {
+    @apply w-full bg-[url(./assets/images/categories-background.png)] bg-contain py-[38px];
   }
 }
