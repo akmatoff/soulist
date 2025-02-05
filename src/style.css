@@ -73,4 +73,8 @@
   .bar {
     @apply bg-[url(./assets/images/bar.png)];
   }
+
+  .language-select {
+    @apply cursor-pointer px-1 rounded-[5px] border-[var(--primary)];
+  }
 }
