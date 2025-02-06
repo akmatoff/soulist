@@ -1,6 +1,6 @@
 import { CUISINE_CATEGORIES_COLORS } from "../constants";
 import { cuisineProducts } from "../data/cusine_products";
-import { createTranslationKey, translate } from "../i18n";
+import { currentLanguage } from "../i18n";
 
 export function createProductsList(category) {
   if (!cuisineProducts[category]) return;
@@ -11,48 +11,32 @@ export function createProductsList(category) {
     const categoryColor = CUISINE_CATEGORIES_COLORS[category];
 
     const section = document.createElement("div");
-    section.classList.add("flex", "items-center", "gap-4", "p-2");
+    section.classList.add("flex", "items-center", "justify-between", "p-3");
 
-    if (isIndexEven) {
+    if (!isIndexEven) {
       section.classList.add("flex-row-reverse");
     }
 
     const image = document.createElement("img");
-    image.classList.add(
-      "object-contain",
-      "flex-shrink",
-      "h-auto",
-      "w-auto",
-      "max-w-[212px]",
-      "md:max-w-[388px]"
-    );
-    image.setAttribute("src", product.image);
-    image.setAttribute(
-      "alt",
-      translate(createTranslationKey(category, product.id)).title
-    );
+    image.classList.add("max-w-[220px]", "md:max-w-[388px]", "object-cover");
+    image.setAttribute("src", `/cuisine/${product.title?.ru}.png`);
+    image.setAttribute("alt", product.title?.[currentLanguage]);
 
     const infoSection = document.createElement("div");
-    // infoSection.classList.add("max-w-[154px]");
 
     const title = document.createElement("h1");
     title.classList.add("text-[12px]", "md:text-[20px]", "uppercase");
-    title.setAttribute(
-      "data-i18n",
-      createTranslationKey(category, product.id, "title")
-    );
+    title.innerText = product.title?.[currentLanguage];
 
     const description = document.createElement("p");
     description.classList.add(
       "text-[8px]",
       "md:text-[11px]",
       "font-normal",
-      "mt-1"
+      "mt-1",
+      "uppercase"
     );
-    description.setAttribute(
-      "data-i18n",
-      createTranslationKey(category, product.id, "description")
-    );
+    description.innerText = product.description?.[currentLanguage];
 
     const priceSection = document.createElement("div");
     priceSection.classList.add("w-fit", "mb-2");
@@ -67,7 +51,7 @@ export function createProductsList(category) {
 
     const price = document.createElement("span");
     price.classList.add("text-[12px]", "md:text-[18px]", "ml-2");
-    price.innerText = product.price + " сом";
+    price.innerText = product.price + " с.";
 
     section.appendChild(image);
 
