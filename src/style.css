@@ -28,11 +28,15 @@
     --background: #0b0b0b;
     --foreground: #f8f8f8;
     --primary: #00a79c;
+    --content: #121212;
   }
 
   * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth !important;
   }
 
   body {
@@ -41,6 +45,7 @@
     min-height: 100dvh;
     color: var(--foreground);
     font-family: Gotham, sans-serif;
+    scroll-behavior: smooth;
   }
 
   .bg-background {
@@ -94,5 +99,10 @@
   #cousineCategories,
   #barCategories {
     @apply w-full py-[38px];
+  }
+
+  .burger-menu,
+  .close-menu {
+    @apply md:hidden w-[48px] h-[48px] rounded-full bg-[var(--primary)] grid place-content-center cursor-pointer;
   }
 }

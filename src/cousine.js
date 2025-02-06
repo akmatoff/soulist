@@ -10,19 +10,24 @@ const cousineCategoriesSection = document.querySelector(
   "#cousineCategoriesContent"
 );
 
+const burgerMenuButton = document.querySelector(".burger-menu");
+const modal = document.querySelector("#modal");
+const modalContent = document.querySelector("#modalCategories");
+const modalCloseButton = document.querySelector(".close-menu");
+const modalOverlay = document.querySelector("#overlay");
+
 // Listeners
 document.addEventListener("DOMContentLoaded", () => {
   displayCousineCategories();
+  handleModal();
+
   loadLanguage(currentLanguage);
 });
 
 function displayCousineCategories() {
   // Category selector
   cousineCategories.forEach((category) => {
-    const categoryElement = document.createElement("a");
-    categoryElement.setAttribute("href", `#${category}`);
-    categoryElement.setAttribute("data-i18n", `cousine_categories.${category}`);
-    categoryElement.classList.add("category");
+    const categoryElement = createCategoryElement(category);
 
     cousineCategoriesSelector.appendChild(categoryElement);
   });
@@ -61,5 +66,38 @@ function displayCousineCategories() {
     categorySection.appendChild(header);
 
     cousineCategoriesSection.appendChild(categorySection);
+  });
+}
+
+function createCategoryElement(category) {
+  const categoryElement = document.createElement("a");
+  categoryElement.setAttribute("href", `#${category}`);
+  categoryElement.setAttribute("data-i18n", `cousine_categories.${category}`);
+  categoryElement.classList.add("category");
+
+  return categoryElement;
+}
+
+function handleModal() {
+  burgerMenuButton.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+
+  modalCloseButton.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  modalOverlay.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  cousineCategories.forEach((category) => {
+    const categoryElement = createCategoryElement(category);
+
+    categoryElement.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    modalContent.appendChild(categoryElement);
   });
 }
