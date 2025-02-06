@@ -32,6 +32,18 @@ export async function loadLanguage(language) {
   }
 }
 
+export function translate(key) {
+  const translation = getNestedTranslation(LANGUAGE[currentLanguage], key);
+
+  if (!translation) return "";
+
+  return translation;
+}
+
+export function createTranslationKey(...args) {
+  return args.filter(Boolean).join(".");
+}
+
 export function switchLanguage(language) {
   currentLanguage = language;
   localStorage.setItem("language", language);

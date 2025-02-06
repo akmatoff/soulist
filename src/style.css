@@ -2,8 +2,14 @@
 
 @font-face {
   font-family: "Gotham";
-  src: url("./assets/fonts/Gotham/Gotham-Medium.otf");
+  src: url("./assets/fonts/Gotham/Gotham-Light.otf");
   font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/fonts/Gotham/Gotham-Medium.otf");
+  font-weight: 500;
 }
 
 @font-face {
@@ -48,6 +54,8 @@
     font-family: Gotham, sans-serif;
     scroll-behavior: smooth;
     overflow-y: auto;
+
+    @apply font-medium;
   }
 
   .bg-background {

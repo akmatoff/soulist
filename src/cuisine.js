@@ -2,6 +2,7 @@ import { cuisineCategoriesContent, cuisineCategories } from "./data/categories";
 import { currentLanguage, loadLanguage } from "./i18n";
 import { CUISINE_CATEGORIES_COLORS } from "./constants";
 import "./style.css";
+import { createProductsList } from "./products/products-ui";
 
 // Selectors
 const cuisineCategoriesSelector = document.querySelector(
@@ -69,12 +70,23 @@ function displaycuisineCategories() {
       serviceFee.classList.add("md:top-8");
     }
 
+    const categoryProducts = document.createElement("div");
+    categoryProducts.classList.add("mt-4");
+
     header.appendChild(line);
     header.appendChild(title);
     header.appendChild(line2);
     header.appendChild(serviceFee);
 
     categorySection.appendChild(header);
+
+    const productsList = createProductsList(category);
+
+    if (productsList) {
+      productsList.forEach((product) => categoryProducts.appendChild(product));
+    }
+
+    categorySection.appendChild(categoryProducts);
 
     cuisineCategoriesSection.appendChild(categorySection);
   });
