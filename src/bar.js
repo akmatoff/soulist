@@ -5,7 +5,7 @@ import { currentLanguage, loadLanguage } from "./i18n";
 const barCategoriesSelector = document.querySelector("#barCategoriesSelector");
 const barCategoriesSection = document.querySelector("#barCategoriesContent");
 
-export function displayCousineCategories() {
+export function displayCuisineCategories() {
   barCategories.forEach((category) => {
     const categoryElement = document.createElement("a");
     categoryElement.setAttribute("href", `#${category}`);
@@ -45,6 +45,6 @@ export function displayCousineCategories() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  displayCousineCategories();
+  displayCuisineCategories();
   loadLanguage(currentLanguage);
 });

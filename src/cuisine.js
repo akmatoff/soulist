@@ -1,13 +1,13 @@
-import { cousineCategoriesContent, cousineCategories } from "./data/categories";
+import { cuisineCategoriesContent, cuisineCategories } from "./data/categories";
 import { currentLanguage, loadLanguage } from "./i18n";
-import { COUSINE_CATEGORIES_COLORS } from "./constants";
+import { CUISINE_CATEGORIES_COLORS } from "./constants";
 
 // Selectors
-const cousineCategoriesSelector = document.querySelector(
-  "#cousineCategoriesSelector"
+const cuisineCategoriesSelector = document.querySelector(
+  "#cuisineCategoriesSelector"
 );
-const cousineCategoriesSection = document.querySelector(
-  "#cousineCategoriesContent"
+const cuisineCategoriesSection = document.querySelector(
+  "#cuisineCategoriesContent"
 );
 
 const burgerMenuButton = document.querySelector(".burger-menu");
@@ -18,22 +18,22 @@ const modalOverlay = document.querySelector("#overlay");
 
 // Listeners
 document.addEventListener("DOMContentLoaded", () => {
-  displayCousineCategories();
+  displaycuisineCategories();
   handleModal();
 
   loadLanguage(currentLanguage);
 });
 
-function displayCousineCategories() {
+function displaycuisineCategories() {
   // Category selector
-  cousineCategories.forEach((category) => {
+  cuisineCategories.forEach((category) => {
     const categoryElement = createCategoryElement(category);
 
-    cousineCategoriesSelector.appendChild(categoryElement);
+    cuisineCategoriesSelector.appendChild(categoryElement);
   });
 
   // Category section with products
-  cousineCategoriesContent.forEach((category) => {
+  cuisineCategoriesContent.forEach((category) => {
     const categorySection = document.createElement("div");
     categorySection.classList.add("category-section");
     categorySection.setAttribute("id", category);
@@ -43,7 +43,7 @@ function displayCousineCategories() {
 
     const line = document.createElement("div");
     line.classList.add("h-[1.5px]", "md:h-[2.8px]", "w-full", "flex-[1_1_0%]");
-    line.style.backgroundColor = COUSINE_CATEGORIES_COLORS[category];
+    line.style.backgroundColor = CUISINE_CATEGORIES_COLORS[category];
 
     const line2 = document.createElement("div");
     line2.classList.add(
@@ -52,12 +52,12 @@ function displayCousineCategories() {
       "w-full",
       "flex-[4_1_10%]"
     );
-    line2.style.backgroundColor = COUSINE_CATEGORIES_COLORS[category];
+    line2.style.backgroundColor = CUISINE_CATEGORIES_COLORS[category];
 
     const title = document.createElement("h1");
-    title.setAttribute("data-i18n", `cousine_categories.${category}`);
+    title.setAttribute("data-i18n", `cuisine_categories.${category}`);
     title.classList.add("category-section-title");
-    title.style.color = COUSINE_CATEGORIES_COLORS[category];
+    title.style.color = CUISINE_CATEGORIES_COLORS[category];
 
     header.appendChild(line);
     header.appendChild(title);
@@ -65,14 +65,14 @@ function displayCousineCategories() {
 
     categorySection.appendChild(header);
 
-    cousineCategoriesSection.appendChild(categorySection);
+    cuisineCategoriesSection.appendChild(categorySection);
   });
 }
 
 function createCategoryElement(category) {
   const categoryElement = document.createElement("a");
   categoryElement.setAttribute("href", `#${category}`);
-  categoryElement.setAttribute("data-i18n", `cousine_categories.${category}`);
+  categoryElement.setAttribute("data-i18n", `cuisine_categories.${category}`);
   categoryElement.classList.add("category");
 
   return categoryElement;
@@ -91,7 +91,7 @@ function handleModal() {
     modal.classList.add("hidden");
   });
 
-  cousineCategories.forEach((category) => {
+  cuisineCategories.forEach((category) => {
     const categoryElement = createCategoryElement(category);
 
     categoryElement.addEventListener("click", () => {

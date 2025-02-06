@@ -72,8 +72,8 @@
     @apply grid flex-1 place-content-center h-[114px] min-w-[270px] md:max-w-[353px] border border-[#DFDFDF52] rounded-[20px] cursor-pointer;
   }
 
-  .cousine {
-    @apply bg-[url(./assets/images/cousine.png)];
+  .cuisine {
+    @apply bg-[url(./assets/images/cuisine.png)];
   }
 
   .bar {
@@ -96,7 +96,7 @@
     @apply uppercase text-[18px] md:text-[35px];
   }
 
-  #cousineCategories,
+  #cuisineCategories,
   #barCategories {
     @apply w-full py-[38px];
   }

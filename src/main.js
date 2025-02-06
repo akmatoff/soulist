@@ -1,13 +1,13 @@
 import { loadLanguage, currentLanguage, switchLanguage } from "./i18n";
 import "./style.css";
 
-const cousineMenuButton = document.querySelector(".cousine");
+const cuisineMenuButton = document.querySelector(".cuisine");
 const barMenuButton = document.querySelector(".bar");
 
 const languageSelectors = document.querySelectorAll(".language-select");
 
-cousineMenuButton.addEventListener("click", () => {
-  window.location.href = "/cousine.html";
+cuisineMenuButton.addEventListener("click", () => {
+  window.location.href = "/cuisine.html";
 });
 
 barMenuButton.addEventListener("click", () => {
