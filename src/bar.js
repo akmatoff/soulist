@@ -4,13 +4,30 @@ import { currentLanguage, loadLanguage } from "./i18n";
 
 const barCategoriesSelector = document.querySelector("#barCategoriesSelector");
 const barCategoriesSection = document.querySelector("#barCategoriesContent");
+const burgerMenuButton = document.querySelector(".burger-menu");
+const modal = document.querySelector("#modal");
+const modalContent = document.querySelector("#modalCategories");
+const modalCloseButton = document.querySelector(".close-menu");
+const modalOverlay = document.querySelector("#overlay");
 
-export function displayCuisineCategories() {
+document.addEventListener("DOMContentLoaded", () => {
+  displayCategories();
+  handleModal();
+  loadLanguage(currentLanguage);
+});
+
+function createCategoryElement(category) {
+  const categoryElement = document.createElement("a");
+  categoryElement.setAttribute("href", `#${category}`);
+  categoryElement.setAttribute("data-i18n", `bar_categories.${category}`);
+  categoryElement.classList.add("category");
+
+  return categoryElement;
+}
+
+export function displayCategories() {
   barCategories.forEach((category) => {
-    const categoryElement = document.createElement("a");
-    categoryElement.setAttribute("href", `#${category}`);
-    categoryElement.setAttribute("data-i18n", `bar_categories.${category}`);
-    categoryElement.classList.add("category");
+    const categoryElement = createCategoryElement(category);
 
     const categorySection = document.createElement("div");
     categorySection.classList.add("category-section");
@@ -44,7 +61,26 @@ export function displayCuisineCategories() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  displayCuisineCategories();
-  loadLanguage(currentLanguage);
-});
+function handleModal() {
+  burgerMenuButton.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+
+  modalCloseButton.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  modalOverlay.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  barCategories.forEach((category) => {
+    const categoryElement = createCategoryElement(category);
+
+    categoryElement.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    modalContent.appendChild(categoryElement);
+  });
+}
