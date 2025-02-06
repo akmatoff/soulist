@@ -15,12 +15,16 @@
     "hot": "Горячее",
     "pasta": "Паста",
     "rolls": "Роллы",
+    "sets": "Сеты",
+    "sushi": "Суши",
     "steaks": "Стейки",
     "hosper": "Хоспер",
     "garnish": "Гарниры",
     "bread": "Хлеб",
+    "pizza": "Пицца",
     "neapolitan_pizza": "Неаполитанская пицца",
-    "desserts": "Десерты"
+    "desserts": "Десерты",
+    "michelle_desserts": "Десерты Michelle"
   },
   "bar_categories": {
     "party_mix": "Party Mix",

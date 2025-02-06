@@ -28,3 +28,22 @@ export const barCategories = [
     'non_alcoholic_drinks',
     'soulist_rules'
 ]
+
+export const cousineCategoriesContent = [
+    'cold_snacks',
+    'salads',
+    'soups',
+    'hot_snacks',
+    'hot',
+    'pasta',
+    'rolls',
+    'sets',
+    'sushi',
+    'steaks',
+    'hosper',
+    'garnish',
+    'bread',
+    'pizza',
+    'neapolitan_pizza',
+    'desserts'
+]

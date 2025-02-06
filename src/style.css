@@ -84,7 +84,11 @@
   }
 
   .category-section {
-    @apply min-h-dvh w-full bg-[url(./assets/images/categories-background.png)];
+    @apply py-7 min-h-dvh w-full bg-[url(./assets/images/categories-background.png)];
+  }
+
+  .category-section-title {
+    @apply uppercase text-[18px] md:text-[35px];
   }
 
   #cousineCategories,
