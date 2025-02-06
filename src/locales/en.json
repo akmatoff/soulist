@@ -1,10 +1,43 @@
 {
   "hero": {
-    "heading": "Welcome to my tutorial",
+    "heading": "Добро пожаловать в пространство, в котором объединены искусство музыки, гастрономии и стиля.",
     "sub_heading": "Место, где звучат не только любимые хиты, но и эмоции, раскрывающиеся в атмосфере вдохновения, ностальгии и заветных желаний.",
     "soulist_is_more": "SOULIST — это больше, чем караоке-бар.",
     "soulist_is": "mesto, gde poet dusha"
   },
-  "cuisine": "Кухня",
-  "bar": "Бар"
+  "cuisine": "Cuisine",
+  "bar": "Bar",
+  "cuisine_categories": {
+    "cold_snacks": "Cold snacks",
+    "salads": "Salads",
+    "soups": "Soups",
+    "hot_snacks": "Hot snacks",
+    "hot": "Hot",
+    "pasta": "Pasta",
+    "rolls": "Rolls",
+    "sets": "Sets",
+    "sushi": "Sushi",
+    "steaks": "Steaks",
+    "hosper": "Hosper",
+    "garnish": "Garnish",
+    "bread": "Bread",
+    "pizza": "Pizza",
+    "neapolitan_pizza": "Neapolitan Pizza",
+    "desserts": "Desserts",
+    "michelle_desserts": "Michelle Desserts"
+  },
+  "bar_categories": {
+    "party_mix": "Party Mix",
+    "champagne": "Champagne",
+    "sparkling_wines": "Sparkling wines",
+    "white_wines": "White wines",
+    "red_wines": "Red wines",
+    "pink_wines": "Pink wines",
+    "glass_wines": "Glass wines",
+    "cocktails": "Cocktails",
+    "whiskey": "Whiskey",
+    "bar_card": "Bar card",
+    "non_alcoholic_drinks": "Non-alcoholic drinks",
+    "soulist_rules": "Soulist karaoke's rules"
+  }
 }
