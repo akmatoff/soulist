@@ -16,3 +16,18 @@ export const COUSINE_CATEGORIES_COLORS = {
     desserts: '#986BA7',
     michelle_desserts: '#986BA7'
 }
+
+export const BAR_CATEGORIES_COLORS = {
+    party_mix: '#B03C1F',
+    champagne: '#CDA35A',
+    sparkling_wines: '#FFD556',
+    white_wines: '#980506',
+    red_wines: '#980506',
+    pink_wines: '#980506',
+    glass_wines: '#980506',
+    cocktails: '#B03C1F',
+    whiskey: '#FAB43A',
+    bar_card: '#B03C1F',
+    non_alcoholic_drinks: '#AA8068',
+    soulist_rules: '#61B8C4'
+}
