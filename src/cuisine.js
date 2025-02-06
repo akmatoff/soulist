@@ -40,7 +40,7 @@ function displaycuisineCategories() {
     categorySection.setAttribute("id", category);
 
     const header = document.createElement("div");
-    header.classList.add("flex", "items-center", "gap-[12px]");
+    header.classList.add("flex", "items-center", "gap-[12px]", "relative");
 
     const line = document.createElement("div");
     line.classList.add("h-[1.5px]", "md:h-[2.8px]", "w-full", "flex-[1_1_0%]");
@@ -60,9 +60,19 @@ function displaycuisineCategories() {
     title.classList.add("category-section-title");
     title.style.color = CUISINE_CATEGORIES_COLORS[category];
 
+    const serviceFee = document.createElement("div");
+    serviceFee.classList.add("service-fee");
+    serviceFee.setAttribute("data-i18n", "serviceFee");
+    serviceFee.style.color = CUISINE_CATEGORIES_COLORS[category];
+
+    if (["cold_snacks", "hot_snacks"].includes(category)) {
+      serviceFee.classList.add("md:top-8");
+    }
+
     header.appendChild(line);
     header.appendChild(title);
     header.appendChild(line2);
+    header.appendChild(serviceFee);
 
     categorySection.appendChild(header);
 

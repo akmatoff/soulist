@@ -7,6 +7,7 @@
   },
   "cuisine": "Кухня",
   "bar": "Бар",
+  "serviceFee": "Обслуживание 15%",
   "cuisine_categories": {
     "cold_snacks": "Холодные закуски",
     "salads": "Салаты",

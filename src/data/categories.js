@@ -44,6 +44,5 @@ export const cuisineCategoriesContent = [
   "garnish",
   "bread",
   "pizza",
-  "neapolitan_pizza",
   "desserts",
 ];
