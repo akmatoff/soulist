@@ -1,6 +1,7 @@
 import { BAR_CATEGORIES_COLORS } from "./constants";
 import { barCategories } from "./data/categories";
 import { currentLanguage, loadLanguage } from "./i18n";
+import "./style.css";
 
 const barCategoriesSelector = document.querySelector("#barCategoriesSelector");
 const barCategoriesSection = document.querySelector("#barCategoriesContent");
@@ -28,6 +29,15 @@ function createCategoryElement(category) {
 export function displayCategories() {
   barCategories.forEach((category) => {
     const categoryElement = createCategoryElement(category);
+
+    categoryElement.addEventListener("click", (e) => {
+      console.log(e.target);
+      e.preventDefault();
+
+      const section = document.querySelector(`#${category}`);
+
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
 
     const categorySection = document.createElement("div");
     categorySection.classList.add("category-section");

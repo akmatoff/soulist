@@ -36,7 +36,8 @@
   }
 
   html {
-    scroll-behavior: smooth !important;
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -46,6 +47,7 @@
     color: var(--foreground);
     font-family: Gotham, sans-serif;
     scroll-behavior: smooth;
+    overflow-y: auto;
   }
 
   .bg-background {
@@ -93,7 +95,7 @@
   }
 
   .category-section-title {
-    @apply uppercase text-[18px] md:text-[35px];
+    @apply uppercase text-[18px]/[18px] md:text-[35px]/[32px] md:max-w-[220px];
   }
 
   #cuisineCategories,

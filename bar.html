@@ -8,7 +8,7 @@
     <title>Soulist</title>
 </head>
 
-<body class="bg-background">
+<body class="bg-background smooth-scroll">
     <div class="absolute right-0 top-0 p-5 md:flex md:gap-[23px]">
         <div data-lang="kg" class="language-select">
             <img src="./src/assets/images/flags/kyrgyzstan.png">
@@ -66,12 +66,12 @@
     <div id="modal" class="hidden fixed z-10 bottom-0 right-0 left-0 p-5">
         <div id="overlay" class="fixed left-0 right-0 top-0 bottom-0 bg-black opacity-40"></div>
         <div id="modalContent"
-            class="relative z-20 flex flex-col min-h-[438px] max-h-[520px] items-center bg-[var(--content)] rounded-[20px] py-[25px] overflow-y-auto">
+            class="relative z-20 flex flex-col min-h-[438px] max-h-[520px] items-center bg-[var(--content)] rounded-[20px] py-[25px] px-4">
             <div class="close-menu shrink-0 flex-shrink-0">
                 <img src="./src/assets/cross.svg" alt="cross">
             </div>
 
-            <div id="modalCategories" class="flex flex-wrap justify-center gap-[13px] mt-[35px]"></div>
+            <div id="modalCategories" class="flex flex-wrap justify-center gap-[13px] mt-[35px] overflow-y-auto"></div>
         </div>
     </div>
 

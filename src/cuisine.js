@@ -1,6 +1,7 @@
 import { cuisineCategoriesContent, cuisineCategories } from "./data/categories";
 import { currentLanguage, loadLanguage } from "./i18n";
 import { CUISINE_CATEGORIES_COLORS } from "./constants";
+import "./style.css";
 
 // Selectors
 const cuisineCategoriesSelector = document.querySelector(
