@@ -2,6 +2,12 @@
 
 @font-face {
   font-family: "Gotham";
+  src: url("./assets/fonts/Gotham/Gotham-Thin.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Gotham";
   src: url("./assets/fonts/Gotham/Gotham-Light.otf");
   font-weight: 400;
 }
@@ -29,6 +35,10 @@
   src: url("./assets/fonts/Sattinda/Sattinda.otf");
 }
 
+@theme {
+  --breakpoint-md: 640px;
+}
+
 @layer base {
   :root {
     --background: #0b0b0b;
@@ -53,7 +63,7 @@
     color: var(--foreground);
     font-family: Gotham, sans-serif;
     scroll-behavior: smooth;
-    overflow-y: auto;
+    overflow-x: hidden;
 
     @apply font-medium;
   }
@@ -91,32 +101,56 @@
   }
 
   .language-select {
-    @apply cursor-pointer px-1 rounded-[5px] border-[var(--primary)];
+    @apply cursor-pointer max-w-[46px] px-1 mb-2 rounded-[5px] border-[var(--primary)];
   }
 
   .category {
-    @apply px-[14px] py-[8px] border-2 border-[var(--primary)] rounded-[12px] text-[var(--primary)] cursor-pointer;
+    @apply px-[10px] py-[4px] border-2 border-[var(--primary)] rounded-[12px] text-[var(--primary)] cursor-pointer;
   }
 
   .category-section {
-    @apply py-7 min-h-dvh w-full bg-[url(./assets/images/categories-background.png)];
+    @apply py-6 w-full;
   }
 
   .category-section-title {
-    @apply uppercase text-[18px]/[18px] md:text-[35px]/[32px] md:max-w-[230px] text-center;
+    @apply uppercase text-[18px]/[18px] md:text-[35px]/[32px] w-auto;
   }
 
   .service-fee {
-    @apply absolute right-6 top-3 md:top-5 text-[7px] md:text-[14px] font-thin uppercase;
+    @apply absolute right-3 md:right-6 top-3 md:top-5 text-[7px] md:text-[14px] font-normal uppercase;
   }
 
   #cuisineCategories,
   #barCategories {
-    @apply w-full py-[38px];
+    @apply w-full py-[38px] overflow-x-hidden;
+  }
+
+  #cuisineCategories {
+    background-image: url("./assets/images/categories-background.png");
+    background-size: 100%;
+    background-repeat: repeat-y;
+    position: relative;
+  }
+
+  #barCategoriesContent,
+  #cuisineCategoriesContent {
+    @apply w-full relative;
+  }
+
+  .burger-menu {
+    @apply sticky z-20 top-10 right-0 left-0;
   }
 
   .burger-menu,
   .close-menu {
     @apply md:hidden w-[48px] h-[48px] rounded-full bg-[var(--primary)] grid place-content-center cursor-pointer;
+  }
+
+  .button-shadow {
+    box-shadow: 0px 0px 17.9px 0px #00a79c94;
+  }
+
+  .drinks-container {
+    @apply w-full max-w-[800px] mx-auto;
   }
 }

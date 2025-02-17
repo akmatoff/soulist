@@ -1,0 +1,7 @@
+services:
+  qr_menu:
+    build:
+      context: .
+    container_name: soulist_qr_menu
+    ports:
+      - "4200:80"

@@ -12,6 +12,7 @@ export const CUISINE_CATEGORIES_COLORS = {
   hosper: "#D46662",
   garnish: "#AA8068",
   bread: "#AA8068",
+  neapolitan_pizza: "#D37F52",
   pizza: "#D37F52",
   desserts: "#986BA7",
   michelle_desserts: "#986BA7",

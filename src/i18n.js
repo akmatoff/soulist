@@ -8,7 +8,18 @@ const LANGUAGE = {
   kg,
 };
 
-export let currentLanguage = localStorage.getItem("language") || "ru";
+export let currentLanguage =
+  new URLSearchParams(window.location.search).get("lang") ||
+  localStorage.getItem("language") ||
+  "ru";
+
+export function getCurrentLanguageFromParams() {
+  return (
+    new URLSearchParams(window.location.search).get("lang") ||
+    localStorage.getItem("language") ||
+    "ru"
+  );
+}
 
 function getNestedTranslation(obj, keyPath) {
   return keyPath.split(".").reduce((acc, key) => acc && acc[key], obj);
@@ -47,4 +58,11 @@ export function createTranslationKey(...args) {
 export function switchLanguage(language) {
   currentLanguage = language;
   localStorage.setItem("language", language);
+
+  const url = new URL(window.location.href);
+  url.searchParams.set("lang", language);
+  window.history.replaceState({}, "", url);
+  window.location.reload();
+
+  loadLanguage(language);
 }

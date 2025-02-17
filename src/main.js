@@ -3,6 +3,7 @@ import "./style.css";
 
 const cuisineMenuButton = document.querySelector(".cuisine");
 const barMenuButton = document.querySelector(".bar");
+const scrollTopButton = document.querySelector("#scrollTopButton");
 
 const languageSelectors = document.querySelectorAll(".language-select");
 
@@ -17,6 +18,16 @@ barMenuButton.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   loadLanguage(currentLanguage);
   updateLanguageSelectors();
+
+  document.addEventListener("scrollend", () => {
+    if (window.scrollY < 500) {
+      scrollTopButton.classList.remove("opacity-100", "pointer-events-auto");
+      scrollTopButton.classList.add("opacity-0", "pointer-events-none");
+    } else {
+      scrollTopButton.classList.remove("pointer-events-none");
+      scrollTopButton.classList.add("opacity-100", "pointer-events-auto");
+    }
+  });
 });
 
 languageSelectors.forEach((selector) => {

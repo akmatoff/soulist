@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/soulist.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soulist</title>
 </head>
@@ -16,15 +16,14 @@
         <div data-lang="ru" class="language-select">
             <img src="./src/assets/images/flags/russia.png">
         </div>
-        <div data-lang="en" class="language-select">
-            <img src="./src/assets/images/flags/usa.png">
-        </div>
+
     </div>
 
     <main class="flex flex-col items-center min-h-dvh pb-[67px] gap-[40px]">
-        <div class="flex flex-col items-center max-w-[780px] gap-[73px] px-[27px] md:px-[62px]">
-            <section class="flex flex-col items-center text-center text-[16px] md:text-[24px] font-medium">
-                <img src="src/assets/soulist.svg">
+        <div class="flex flex-col items-center gap-[73px] px-[27px] md:px-[62px] pt-10">
+            <section
+                class="flex flex-col items-center text-center text-[16px] md:text-[24px] font-medium max-w-[780px]">
+                <img src="src/assets/soulist.svg" class="object-center w-full h-72">
 
                 <div class="flex flex-col gap-[24px]">
                     <div>
@@ -35,13 +34,13 @@
                     <div>
                         <p data-i18n="hero.soulist_is_more"></p>
                         <p>SOULIST - <span data-i18n="hero.soulist_is"
-                                class="font-sattinda text-primary text-[32px] md:text-[37px]"></span></p>
+                                class="font-sattinda text-primary text-[32px] md:text-[50px]"></span></p>
                     </div>
                 </div>
 
             </section>
 
-            <section class="flex justify-center w-full flex-wrap gap-[14px]">
+            <section class="flex justify-center w-full flex-wrap gap-[14px] max-w-[780px]">
                 <div class="menu-button cuisine">
                     <h1 data-i18n="cuisine" class="uppercase font-bold text-[38px]"></h1>
                 </div>
@@ -51,27 +50,36 @@
                 </div>
             </section>
 
-            <div id="barCategoriesSelector" class="hidden md:flex gap-[13px] flex-wrap justify-center"></div>
-
-            <div class="burger-menu">
-                <img src="./src/assets/hamburger.svg" alt="hamburger">
+            <div id="barCategoriesSelector" class="hidden md:flex gap-[13px] flex-wrap justify-center max-w-[780px]">
             </div>
+
+        </div>
+
+        <div class="burger-menu">
+            <img src="./src/assets/hamburger.svg" alt="hamburger">
         </div>
 
         <section id="barCategories" class="flex justify-center">
-            <div id="barCategoriesContent" class="w-full max-w-[780px]"></div>
+            <div id="barCategoriesContent"></div>
         </section>
     </main>
 
-    <div id="modal" class="hidden fixed z-10 bottom-0 right-0 left-0 p-5">
+    <div id="modal" class="hidden fixed z-30 bottom-0 right-0 left-0 p-5">
         <div id="overlay" class="fixed left-0 right-0 top-0 bottom-0 bg-black opacity-40"></div>
         <div id="modalContent"
             class="relative z-20 flex flex-col min-h-[438px] max-h-[520px] items-center bg-[var(--content)] rounded-[20px] py-[25px] px-4">
-            <div class="close-menu shrink-0 flex-shrink-0">
+            <div class="close-menu flex-shrink-0">
                 <img src="./src/assets/cross.svg" alt="cross">
             </div>
 
             <div id="modalCategories" class="flex flex-wrap justify-center gap-[13px] mt-[35px] overflow-y-auto"></div>
+        </div>
+    </div>
+
+    <div id="scrollTopButton"
+        class="rounded-[20px] cursor-pointer fixed z-20 top-[50%] right-5 button-shadow opacity-0 duration-300 pointer-events-none">
+        <div class="rounded-[12px] w-[46px] h-[46px] bg-[#121212] p-2">
+            <img class="rounded-[8px] border-[1.5px] p-1 border-[var(--primary)]" src="./src/assets/angle-up.svg">
         </div>
     </div>
 
